@@ -10,6 +10,7 @@
 <!--Here goes the body of the page -->
 
 <div class="top-menu">
+    
     <ul>
         <li id="h"><a href="{{ url_for('index')}}">home</a></li>
         <li><a href="{{ url_for('aboutme')}}">about</a></li>
@@ -21,20 +22,10 @@
 </div>
 
 <div class="home" id="home">
-
-
-     <div class="home-content">
-        <div class="home-left-text">
-            <h1>Hey!<br><span> I'm David Pantoja 💻</span></h1>
-            <h2>Software engineer that loves taking<br>ideation to implementation and<br>leveraging the latest in technology to<br>business.</h2>
-            <a href="{{ url_for('work')}}">see my work <img src="./static/img/code_icon.png"></a>
-        </div>
-        
-        <div class="home-profile-image">
-            <img id="profile-image" src="./static/img/david_profile.jpg">
-        </div>
-     </div>
-    
-
+    <div class="home-title-text">
+        <h1>Hi, I'm Alan Muñoz,<br><span>a Software Engineer</span></h1>
+        <p>I’m excited to bring solutions through technology and<br>develop innovation in many areas.</p>
+        <a href="{{ url_for('work')}}">see my work</a>
+    </div>
 </div>
 {% endblock %}
