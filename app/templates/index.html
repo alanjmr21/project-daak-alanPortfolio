@@ -10,22 +10,25 @@
 <!--Here goes the body of the page -->
 
 <div class="top-menu">
-    
-    <ul>
-        <li id="h"><a href="{{ url_for('index')}}">home</a></li>
-        <li><a href="{{ url_for('aboutme')}}">about</a></li>
-        <li><a href="{{ url_for('work')}}">work</a></li>
-        <li><a href="{{ url_for('hobbies')}}">hobbies</a></li>
-        <li><a href="{{ url_for('education')}}">education</a></li>
-        <li><a href="{{ url_for('travel')}}">traveling</a></li>
-    </ul>
+    <li id="h"><a href="{{ url_for('index')}}">home</a></li>
+    <li><a href="{{ url_for('aboutme')}}">about</a></li>
+    <li><a href="{{ url_for('work')}}">work</a></li>
+    <li><a href="{{ url_for('hobbies')}}">hobbies</a></li>
+    <li><a href="{{ url_for('education')}}">education</a></li>
+    <li><a href="{{ url_for('travel')}}">traveling</a></li>
 </div>
 
 <div class="home" id="home">
     <div class="home-title-text">
         <h1>Hi, I'm Alan Muñoz,<br><span>a Software Engineer</span></h1>
-        <p>I’m excited to bring solutions through technology and<br>develop innovation in many areas.</p>
+        <div class="descr-container">
+            <p>I’m excited to bring solutions through technology and develop innovation in many areas.</p>
+        </div>
         <a href="{{ url_for('work')}}">see my work</a>
     </div>
+</div>
+
+<div class="hello-hand">
+    <img src="./static/img/hello-hand.png" >
 </div>
 {% endblock %}
