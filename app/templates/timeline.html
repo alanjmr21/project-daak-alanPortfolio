@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<!--Here goes the title of the page -->
+<title>Portfolio MLH</title>
+<link rel="stylesheet" href='./static/css/timeline.css'>
+{% endblock %}
+
+{% block body %}
+
+<div class="top-menu">
+    <li><a href="{{ url_for('index')}}">home</a></li>
+    <li><a href="{{ url_for('aboutme')}}">about</a></li>
+    <li><a href="{{ url_for('work')}}">work</a></li>
+    <li><a href="{{ url_for('hobbies')}}">hobbies</a></li>
+    <li><a href="{{ url_for('education')}}">education</a></li>
+    <li><a href="{{ url_for('travel')}}">traveling</a></li>
+    <li id="h"><a href="{{ url_for('timeline')}}">timeline</a></li>
+</div>
+
+<div class="title-text">
+    <h1>Welcome to the <span>Timeline 🗓</span> </h1>
+</div>
+
+<div class="timeline-content">
+
+    <div class="form">
+        <form id="dataForm">
+            <h3>Fill the fields to <br>create a post</h3>
+            <div class="field">
+                <label for="inputName">Name</label>
+                <input name="name" type="text">
+            </div>
+            <div class="field">
+                <label for="inputEmail">Email</label>
+                <input name="email" type="email">
+            </div>
+            <div class="field">
+                <label for="inputContent">Content</label>
+                <textarea name="content" cols="2" rows="2"></textarea>
+            </div>
+            <button type="submit" >create post</button>
+        </form>
+    </div>
+
+    <div class="div-posts" id="div-posts">
+
+    </div>
+
+</div>
+
+
+
+<script>
+    const form = document.getElementById("dataForm");
+ 
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const payload = new FormData(form);
+        console.log([...payload])
+        fetch('http://192.168.1.73:5000/api/timeline_post', {
+            method: 'POST',
+            body: payload,
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+
+        location.reload();
+    })
+
+    fetch('http://192.168.1.73:5000/api/timeline_post', {
+        method: 'GET',
+        })
+        .then(res => res.json())
+        .then(data => {
+
+            for(let i = 0; i < data.timeline_posts.length; i++) {
+                // Create div for each post:
+                const post = document.createElement("div");
+                post.className = "div-post";
+
+                //Create p tag elements in HTML and fill them with the post info
+                const user = document.createElement('p');
+                user.innerHTML = data.timeline_posts[i]['name'];
+                user.className = "name"
+
+                const mail = document.createElement('p');
+                mail.innerHTML = data.timeline_posts[i]['email'];
+                mail.className = "email"
+
+                const date = document.createElement('p');
+                date.innerHTML = data.timeline_posts[i]['created_at'];
+                date.className = "date"
+
+                const content = document.createElement('p');
+                content.innerHTML = data.timeline_posts[i]['content'];
+                content.className = "text-content"
+
+                //Add the p tags to the popst div
+                post.appendChild(user);
+                post.appendChild(mail);
+                post.appendChild(date)
+                post.appendChild(content);
+
+                //Get the form div and put the div-post inside of it
+                const div_posts = document.getElementById("div-posts");
+                div_posts.appendChild(post);
+            
+            }
+        });
+
+    
+
+
+    
+
+    
+</script>
+{% endblock %}
+
+
+

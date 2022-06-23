@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap');
+
+body{
+    background: url("./bg-timeline.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.top-menu{
+    margin-top: 1.2em;
+    list-style: none;
+    text-align: center;
+}
+
+.top-menu li{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1em;
+    margin: 2em 3em 1em 3em;
+    display: inline-block;
+    
+}
+
+.top-menu li a{
+    text-decoration: none;
+    color: #F5F5F5;
+    transition: 0.3s;
+}
+
+.top-menu li a:hover{
+    color: #B97373;
+}
+
+.top-menu #h{
+    font-weight: 700;
+    color: #FEFEFF;
+    text-decoration: underline;
+}
+
+.title-text {
+    color: #ECEAEA;
+    text-align: center;
+}
+
+.title-text h1{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.title-text span, h3{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 300;
+}
+
+.timeline-content{
+    color: #ECEAEA;
+    text-align: center;
+}
+
+.form label, button{
+    font-family:'Inconsolata', monospace;
+    font-size: 1.2em;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.field label{
+    margin-left: 2.1em;
+}
+
+textarea {
+    min-width: 210px;
+    max-width: 210px;
+    min-height: 70px;
+    max-height: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.field input, textarea{
+    margin: 0.2em 3em 2em 3em;
+    padding: 0.5em 0.5em 0.5em 0.5em; 
+    border-radius: 5px;
+    border: none;
+}
+
+.form {
+    background: rgba(152, 152, 152, 0.71);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form form{
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    padding-top: 1em;
+}
+
+.form button{
+    background-color: #F2946C;
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    margin-bottom: 1.5em;
+    border-radius: 20px;
+    border: none;
+    transition: 0.5s;
+}
+
+.form button:hover{
+    background-color: #D18362;
+}
+
+.div-post{
+    margin: 1em 1em 1em 1em;
+    padding: 0 0.7em 0 0.7em;
+    text-align: left;
+    background-color: #ECEAEA;
+    max-width: 400px;
+    display: inline-block;
+    border-radius: 10px;
+
+}
+.div-post p{
+    font-family: 'DM Sans', sans-serif;
+    color:#181818;
+    font-size: 1em;
+}
+
+.div-post .name{
+    font-weight: 700;
+}
+
+.div-post .email{
+    line-height: 0px;  
+}
+
+.div-post .date{
+    font-size: 0.8em;
+}
+
+.div-post .text-content{
+    padding-top: 1em;
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2em;
+    color:#543dff
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    .top-menu li{
+        font-size: 1.3em;
+    }
+
+    .timeline-content{
+        display: flex;
+        justify-content: center;
+    }
+
+    .title-text h1{
+        font-size: 4em;
+    }
+
+    .form{
+        max-height: 470px;
+    }
+
+    .div-posts{
+        margin-left: 0;
+        margin-right: auto;
+        max-width: 900px;
+    }
+
+}
