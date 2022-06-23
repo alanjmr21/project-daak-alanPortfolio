@@ -59,7 +59,7 @@
 
         const payload = new FormData(form);
         console.log([...payload])
-        fetch('http://192.168.1.73:5000/api/timeline_post', {
+        fetch('http://159.203.72.240:5000/api/timeline_post', {
             method: 'POST',
             body: payload,
             })
@@ -69,7 +69,7 @@
         location.reload();
     })
 
-    fetch('http://192.168.1.73:5000/api/timeline_post', {
+    fetch('http://159.203.72.240:5000/api/timeline_post', {
         method: 'GET',
         })
         .then(res => res.json())
@@ -110,12 +110,6 @@
             }
         });
 
-    
-
-
-    
-
-    
 </script>
 {% endblock %}
 
