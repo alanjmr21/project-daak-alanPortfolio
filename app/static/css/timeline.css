@@ -51,7 +51,7 @@ body{
     font-size: 3em;
 }
 
-.title-text span, h3{
+.title-text span{
     font-family: 'Inconsolata', monospace;
     font-weight: 300;
 }
@@ -80,7 +80,7 @@ textarea {
     min-width: 210px;
     max-width: 210px;
     min-height: 70px;
-    max-height: 100px;
+    max-height: 70px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -101,13 +101,19 @@ textarea {
 }
 
 .form form{
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-bottom: 1.5em;
-    padding-top: 1em;
 }
 
+.form .form-text{
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+}
+
+
 .form button{
-    background-color: #F2946C;
+    background-color: #67f599;
     padding: 0.3em 0.5em 0.3em 0.5em;
     margin-bottom: 1.5em;
     border-radius: 20px;
@@ -116,7 +122,7 @@ textarea {
 }
 
 .form button:hover{
-    background-color: #D18362;
+    background-color: #5bb87b;
 }
 
 .div-post{
