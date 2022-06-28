@@ -101,7 +101,6 @@ textarea {
 }
 
 .form form{
-    margin-top: 2em;
     margin-bottom: 1.5em;
 }
 
@@ -109,6 +108,7 @@ textarea {
     font-family: 'DM Sans', sans-serif;
     font-weight: 300;
     font-size: 1.5em;
+    padding-top: 1em;
 }
 
 
@@ -122,7 +122,7 @@ textarea {
 }
 
 .form button:hover{
-    background-color: #5bb87b;
+    background-color: #66e291;
 }
 
 .div-post{
@@ -177,6 +177,10 @@ textarea {
 
     .form{
         max-height: 470px;
+    }
+
+    .form .form-text{
+        padding-top: 0.5em;
     }
 
     .div-posts{
