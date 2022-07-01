@@ -40,8 +40,8 @@ class AppTestCase(unittest.TestCase):
         timeline_post = self.client.get('/timeline')
         assert timeline_post.status_code == 200
 
-        print(timeline_post)
-        self.fail("intention_fail")
+        html = timeline_post.get_data(as_text=True)
+        self.fail(html)
 
         html = timeline_post.get_data(as_text=True)
         
