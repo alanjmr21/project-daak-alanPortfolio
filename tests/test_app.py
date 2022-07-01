@@ -41,9 +41,10 @@ class AppTestCase(unittest.TestCase):
         assert timeline_post.status_code == 200
 
         html = timeline_post.get_data(as_text=True)
-        self.fail(html)
+        #self.fail(html)
 
-        html = timeline_post.get_data(as_text=True)
+        #check if it is an html file - postman
+        assert timeline_post.content_type == "application/json" 
         
 
     #the timeline with errors 
