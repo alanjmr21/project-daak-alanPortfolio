@@ -13,8 +13,11 @@ from dotenv import load_dotenv
 load_dotenv()  # take environment variables from .env.
 
 app = Flask(__name__)
-
-mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
+if os.getenv("TESTING") == "true": 
+    print("Running in test mode")
+    mydb=SqliteDatabase('file:memory?mode=memory&cache=shared',uri=True)
+else: 
+    mydb = MySQLDatabase(os.getenv("MYSQL_DATABASE"),
               user=os.getenv("MYSQL_USER"),
               password=os.getenv("MYSQL_PASSWORD"),
               host=os.getenv("MYSQL_HOST"),
@@ -88,18 +91,6 @@ def post_time_line_post():
     
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
-    return {
-        'timeline_posts':[
-            model_to_dict(p)
-            for p in
-            TimelinePost.select().order_by(TimelinePost.created_at.desc())
-        ]
-    }
-    
-@app.route('/api/timeline_post', methods=['DELETE'])
-def delete_time_line_post():
-    id = request.form['id']
-    TimelinePost.delete_by_id(id)
     return {
         'timeline_posts':[
             model_to_dict(p)
