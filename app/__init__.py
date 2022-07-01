@@ -84,17 +84,17 @@ def timeline():
 def post_time_line_post():
     #NAME
     name = request.form['name']
-    if (name == ""): 
+    if name == "": 
         return "Invalid name", 400
 
     #EMAIL 
     email = request.form['email']
-    if (not '@' in email):
+    if not '@' in email:
         return "Invalid email", 400
 
     #CONTENT
     content = request.form['content']
-    if (content == ""):
+    if content == "":
         return "Invalid content", 400
     
     #NO ERRORS
