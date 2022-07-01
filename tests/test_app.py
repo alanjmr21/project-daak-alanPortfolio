@@ -2,12 +2,10 @@
 
 import unittest 
 import os 
-import logging 
 os.environ['TESTING'] = 'true'
 
 from app import app 
 
-log= logging.getLogger( "SomeTest.testSomething" )
 
 class AppTestCase(unittest.TestCase):
     def setUp(self): 
@@ -42,8 +40,8 @@ class AppTestCase(unittest.TestCase):
         timeline_post = self.client.get('/timeline')
         assert timeline_post.status_code == 200
 
-        log.debug(timeline_post)
-        
+        print(timeline_post)
+        self.fail("intention_fail")
 
         html = timeline_post.get_data(as_text=True)
         
@@ -70,7 +68,4 @@ class AppTestCase(unittest.TestCase):
         html = response.get_data(as_text=True)
         assert "Invalid email" in html
 
-if name == "main":
-    logging.basicConfig( stream=sys.stderr )
-    logging.getLogger( "SomeTest.testSomething" ).setLevel( logging.DEBUG )
-    unittest.main()
+
