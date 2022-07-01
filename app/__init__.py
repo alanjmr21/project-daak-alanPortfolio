@@ -85,17 +85,17 @@ def post_time_line_post():
     #NAME
     name = request.form['name']
     if (name == ""): 
-        return "Invalid Name", 400
+        return "Invalid name", 400
 
     #EMAIL 
     email = request.form['email']
     if (not '@' in email):
-        return "Invalid Email", 400
+        return "Invalid email", 400
 
     #CONTENT
     content = request.form['content']
     if (content == ""):
-        return "Invalid Content", 400
+        return "Invalid content", 400
     
     #NO ERRORS
     timeline_post = TimelinePost.create(name=name, email=email, content=content)

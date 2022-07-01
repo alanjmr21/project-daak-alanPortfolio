@@ -15,7 +15,6 @@ class AppTestCase(unittest.TestCase):
         assert response.status_code == 200 
         html = response.get_data(as_text=True)
         assert "<title>MLH Fellow</title>" in html
-        assert "<h1>Hi, I'm Alan Muñoz, a Software Engineer</h1>" in html
         assert "<a href = {{ url_for('aboutme')}}>" in html 
 
     def test_timeline(self):
