@@ -83,7 +83,7 @@ def timeline():
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     #NAME
-    name = request.form['name']
+    name = request.form.get('name', None)
     if name == "": 
         return "Invalid name", 400
 
