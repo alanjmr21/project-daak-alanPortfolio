@@ -42,6 +42,7 @@ class AppTestCase(unittest.TestCase):
         html = timeline_post.get_data(as_text=True)
         assert '<form id = "form" method = "POST" action = "/api/timeline_post">' in html
 
+    #the timeline with errors 
     def test_malformed_timeline_post(self): 
         #1st test - Checking name 
         response = self.client.post("/api/timeline_post", data = {"email":"john@example.com", "content":"Hello World, I'm John!"})
