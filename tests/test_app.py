@@ -44,7 +44,7 @@ class AppTestCase(unittest.TestCase):
         #self.fail(html)
 
         #check if it is an html file - postman
-        assert timeline_post.content_type == "application/json" 
+        assert timeline_post.content_type == application/json
         
 
     #the timeline with errors 
