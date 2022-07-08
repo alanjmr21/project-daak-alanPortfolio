@@ -1,13 +1,9 @@
-#from crypt import methods
 from datetime import datetime
-from email import contentmanager
-from email.policy import default
 import os
 from playhouse.shortcuts import model_to_dict
 from flask import Flask, render_template, request
 import json
 from peewee import *
-from jinja2 import Environment, FileSystemLoader
 from dotenv import load_dotenv
 
 load_dotenv()  # take environment variables from .env.
