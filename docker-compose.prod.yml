@@ -20,7 +20,7 @@ services:
     command: ["--wait-timeout=28800"]
 
   nginx:
-    container_image: nginx
+    container_name: nginx
     image: jonasal/nginx-certbot
     restart: always
     environment:
