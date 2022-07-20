@@ -5,13 +5,6 @@
 
 body{
     margin: 0;
-    /*
-    background: url("./bg-index.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-attachment: fixed;
-    */
 }
 .home-body{
     background: url("./bg-index.jpg");
@@ -105,12 +98,6 @@ body{
     border: 3px solid #ECEAEA;
     transition: 0.5s;
 }
-/*
-.home-title-text a:hover{
-    background-color: #ECEAEA;
-    color: #262626;
-}
-*/
 
 .home-profile-image {
     padding: 6em 2em 2em 5em;
@@ -139,9 +126,20 @@ body{
 }
 
 .info{
-    max-width: 500px;
     display: inline-block;
     margin: 1.2em 1em 1.2em 2em;
+}
+
+.text-pic{
+    max-width: 500px;
+    display: flex;
+}
+
+.text-pic img{
+    width: 20%;
+    height: 20%;
+    margin-right: 1.5em;
+    padding-top: 1.2em;
 }
 
 .info h1{
@@ -206,5 +204,13 @@ body{
 
     .about{
         flex-direction: row;
+    }
+
+    .text-pic{
+        max-width: 900px;
+    }
+    .text-pic img{
+        width: 30%;
+        height: 30%;
     }
   }
