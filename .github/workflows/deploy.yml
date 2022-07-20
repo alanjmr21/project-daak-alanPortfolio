@@ -29,6 +29,4 @@ jobs:
           SSH_IP: ${{ secrets.SSH_IP }}
         
       - name: Deploy site
-        run:
-          chmod +x redeploy-site.sh 
-          ssh my-vps '~/redeploy-site.sh'
+        run: ssh my-vps '~/redeploy-site.sh'
