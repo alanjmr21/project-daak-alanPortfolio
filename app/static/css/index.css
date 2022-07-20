@@ -4,36 +4,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap');
 
 body{
+    margin: 0;
+    /*
     background: url("./bg-index.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
+    */
+}
+.home-body{
+    background: url("./bg-index.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    padding-top: 1.2em;
 }
 
-
 .top-menu{
-    margin-top: 1.2em;
+    margin:0;
     list-style: none;
     text-align: center;
+    background-color: #E9E9E9;
 }
 
 .top-menu li{
     font-family: 'DM Sans', sans-serif;
     font-size: 1em;
-    margin: 2em 3em 1em 3em;
+    margin: 1em 3em 1em 3em;
     display: inline-block;
     
 }
 
 .top-menu li a{
     text-decoration: none;
-    color: #F5F5F5;
+    color: #080808;
     transition: 0.3s;
 }
 
 .top-menu li a:hover{
-    color: #B97373;
+    color: #445BF4;
 }
 
 .top-menu #h{
@@ -94,12 +105,12 @@ body{
     border: 3px solid #ECEAEA;
     transition: 0.5s;
 }
-
+/*
 .home-title-text a:hover{
     background-color: #ECEAEA;
     color: #262626;
 }
-
+*/
 
 .home-profile-image {
     padding: 6em 2em 2em 5em;
@@ -109,6 +120,8 @@ body{
 .hello-hand{
     text-align: right;
     padding-right: 20%;
+    position: relative;
+    top: 50px;
 }
 
 .hello-hand img{
@@ -116,10 +129,36 @@ body{
     max-width: 130px;
 }
 
-@media only screen and (min-width: 1024px) {
-    body{
-        overflow: hidden;
-    }
+.about{
+    background-color: #EEEEEE;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info{
+    max-width: 500px;
+    display: inline-block;
+    margin: 1.2em 1em 1.2em 2em;
+}
+
+.info h1{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 600;
+    font-size: 3em;
+}
+
+.info p{
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4em;
+}
+.socials{
+    display: inline-block;
+}
+
+@media only screen and (min-width: 768px) {
 
     .top-menu li{
         font-size: 1.3em;
@@ -129,7 +168,15 @@ body{
         font-size: 4.5em;
     }
 
+    .info h1{
+        font-size: 4.5em;
+    }
+
     .descr-container p{
+        font-size: 1.6em;
+    }
+
+    .info p{
         font-size: 1.6em;
     }
 
@@ -142,8 +189,22 @@ body{
         font-size: 1.3em;
     }
 
+    .home-title-text a:hover{
+        background-color: #ECEAEA;
+        color: #262626;
+    }
+
     .hello-hand img{
         height: auto;
         max-width: 145px;
+    }
+
+    .hello-hand{
+        position: relative;
+        top: 50px;
+    }
+
+    .about{
+        flex-direction: row;
     }
   }
