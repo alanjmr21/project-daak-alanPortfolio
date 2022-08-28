@@ -1,32 +1,51 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;600;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap');
 
 /* for the navbar*/
 body {
-    background-color: #F5F5F5;
+    margin: 0;
+    background: url("./bg-hobbies.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    padding-top: 1.2em;
+    color: #F5F5F5;
 }
 
-.top-menu ul{
+.top-menu{
+    margin-top: 1.2em;
     list-style: none;
     text-align: center;
 }
 
 .top-menu li{
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.5em;
-    margin: 2em 3em 1em 1em;
+    font-size: 1em;
+    margin: 1em 3em 1em 3em;
     display: inline-block;
 }
 
 .top-menu li a{
     text-decoration: none;
-    color: #588157;
+    color: #F5F5F5;
 }
 
-.top-menu ul #h, .top-menu ul #w a{
+.top-menu li a{
+    text-decoration: none;
+    color: #F5F5F5;
+    transition: 0.3s;
+}
+
+.top-menu li a:hover{
+    color: #445BF4;
+}
+
+.top-menu #selected{
     font-weight: 700;
-    color: #344E41;
+    color: #FEFEFF;
+    text-decoration: underline;
 }
 
 /*for the heading*/
@@ -40,9 +59,9 @@ body {
 }
 
 .home .home-header h1{
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-weight: 600;
-    font-size: 3.5em;
+    font-size: 3em;
 }
 
 .home .home-header span{
@@ -52,7 +71,7 @@ body {
 
 .home .home-header h2{
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 /*for the interests*/
@@ -62,31 +81,47 @@ body {
 
 .hobby{
     width: 22em;
-    height: 25em;
+    height: 18em;
     /*background-color: #65bc91;*/
-    margin: 2em 3em 0 3em;
+    margin: 2em 3em 2em 3em;
     display: inline-block;
     vertical-align: middle;
     /*box-shadow: 0px 5px 8px #888888;*/
 }
 
 .hobby img{
-    width:22em;
-    height:17em;
+    width:10em;
+    height:10em;
     object-fit: cover;
     border: none;
+    border-radius: 50%;
     
 }
 
-.hobby h1{
-    text-align: center;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 300;
-}
-
 p{
-    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.2em;
     padding: 0  2em 0 2em;
     margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 740px){
+    
+    .top-menu li{
+        font-size: 1.3em;
+    }
+
+    .home .home-header h1{
+        font-size: 3.5em;
+    }
+
+    p{
+        font-size: 1.4em;
+    }
+
+    .hobby img{
+        width:14em;
+        height:14em;
+    }
+
 }
