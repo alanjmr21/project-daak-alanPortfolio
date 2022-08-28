@@ -1,75 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;600;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap');
 
 body {
-    background-color: #F5F5F5;
+    margin: 0;
+    background: url("./bg-about.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+    padding-top: 1.2em;
 }
 
-.top-menu ul{
+p, h2{
+    font-family: 'Inconsolata', monospace;
+}
+
+.top-menu{
+    margin-top: 1.2em;
     list-style: none;
-    /*display: flex;*/
     text-align: center;
 }
 
 .top-menu li{
     font-family: 'DM Sans', sans-serif;
-    font-size: 1.5em;
-    margin: 2em 3em 1em 1em;
+    font-size: 1em;
+    margin: 1em 3em 1em 3em;
     display: inline-block;
 }
 
 .top-menu li a{
     text-decoration: none;
-    color: #588157;
+    color: #F5F5F5;
 }
 
-.top-menu ul #h, .top-menu ul #a a{
+.top-menu li a{
+    text-decoration: none;
+    color: #F5F5F5;
+    transition: 0.3s;
+}
+
+.top-menu li a:hover{
+    color: #445BF4;
+}
+
+.top-menu #selected{
     font-weight: 700;
-    color: #344E41;
+    color: #FEFEFF;
+    text-decoration: underline;
 }
 
 /*Espacio parea centrar el contenido*/
 .aboutMe{
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #FEFEFF;
+    display: flex;
+    flex-direction: column;
 }
 
 .aboutMe-left-text{
-    padding: 1em 2em 2em 5em;
+    padding: 1em 2em 2em 3em;
     display: inline-block;
+    max-width: 60%;
 }
 
 .aboutMe-left-text h1 {
     margin-bottom: 0.2em;
     text-align: left;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-weight: 600;
-    font-size: 3.5em;
+    font-size: 3em;
 }
 .aboutMe-left-text span {
     text-align: left;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inconsolata', monospace;
     font-weight: 300;
 }
 
-.aboutMe-left-text h2 {
+.aboutMe-left-text p {
     text-align: left;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.4em;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 2em;
 }
 
-.grid-imgs{
-    display: grid;
-    grid-gap: 0.2em;
-    grid-template-columns: 15em 15em;
-    grid-template-rows: auto;
-}
-.grid-imgs img{
-    width: 100%;
-    height: 100%;
-}
-
-.aboutMe-gallery{
+.connect{
     padding: 1em 2em 2em 5em;
+    max-width: 60%;
     display: inline-block;
+}
+
+@media only screen and (min-width: 740px){
+    
+    .aboutMe{
+        flex-direction: row;
+    }
+    .aboutMe-left-text p {
+        font-size: 1.4em;
+    }
+
+    .top-menu li{
+        font-size: 1.3em;
+    }
+
+    .aboutMe-left-text h1 {
+        font-size: 3.5em;
+    }
 }

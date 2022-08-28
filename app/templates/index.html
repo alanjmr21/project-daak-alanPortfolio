@@ -10,44 +10,43 @@
 <!--Here goes the body of the page -->
 
 <div class="top-menu">
-    <li id="h"><a href="{{ url_for('index')}}">home</a></li>
-    <!--<li><a href="{{ url_for('aboutme')}}">about</a></li>
+    <li id="selected"><a href="{{ url_for('index')}}">home</a></li>
+    <li><a href="{{ url_for('aboutme')}}">about</a></li>
     <li><a href="{{ url_for('work')}}">work</a></li>
     <li><a href="{{ url_for('hobbies')}}">hobbies</a></li>
-    <li><a href="{{ url_for('education')}}">education</a></li>
-    <li><a href="{{ url_for('travel')}}">traveling</a></li>-->
+    <!--<li><a href="{{ url_for('education')}}">education</a></li>-->
+    <!--<li><a href="{{ url_for('travel')}}">traveling</a></li>-->
     <li><a href="{{ url_for('timeline')}}">timeline</a></li>
 </div>
-<div class="home-body">
-    <div class="home" id="home">
-        <div class="home-title-text">
-            <h1>Hi, I'm Alan Muñoz,<br><span>a Software Engineer</span></h1>
-            <div class="descr-container">
-                <p>I’m excited to bring solutions through technology and develop innovation in many areas. Let's work together!</p>
-            </div>
-            <a href="{{ url_for('work')}}">see my work</a>
+
+<div class="home" id="home">
+    <div class="home-title-text">
+        <h1>Hi, I'm Alan Muñoz,<br><span>a Software Engineer</span></h1>
+        <div class="descr-container">
+            <p>I’m excited to bring solutions through technology and develop innovation in many areas. Let's work together!</p>
         </div>
+        <a href="{{ url_for('work')}}">see my work</a>
+    </div>
+</div>
+
+<div class="hello-hand">
+    <img src="./static/img/hello-hand.png" >
+</div>
+</div>
+<!--
+<div class="about">
+<div class="info">
+    <h1>About Me</h1>
+    <div class="text-pic">
+        <img src="./static/img/AlanMunoz.jpg">
+        <p>I'm a 20 year old developer from Mexico. My main focus is to expand my knowledge of Algorithms, Data Science, Production Engineering and ML through projects and programs.</p>
     </div>
     
-    <div class="hello-hand">
-        <img src="./static/img/hello-hand.png" >
-    </div>
 </div>
-
-<div class="about">
-    <div class="info">
-        <h1>About Me</h1>
-        <div class="text-pic">
-            <img src="./static/img/AlanMunoz.jpg">
-            <p>I'm a 20 year old developer from Mexico. My main focus is to expand my knowledge of Algorithms, Data Science, Production Engineering and ML through projects and programs.</p>
-        </div>
-        
-    </div>
-    <div class="socials">
-        <a href="https://www.linkedin.com/in/alan-jose-mu%C3%B1oz-ram%C3%ADrez-0296a71a5/"><img src="./static/img/linkedIn.png"></a>
-        <a href="https://github.com/alanjmr21"><img src="./static/img/github.png"></a>
-    </div>
-
+<div class="socials">
+    <a href="https://www.linkedin.com/in/alan-jose-mu%C3%B1oz-ram%C3%ADrez-0296a71a5/"><img src="./static/img/linkedIn.png"></a>
+    <a href="https://github.com/alanjmr21"><img src="./static/img/github.png"></a>
 </div>
+-->
 
 {% endblock %}
